@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+  color: #ffffff;
+  transition: background-image 1s ease-in-out;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+input, button {
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  width: 300px;
+}
+
+button {
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #007acc;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  animation: popIn 0.7s ease;
+}
+
+.location-box { background: linear-gradient(135deg, #43cea2, #185a9d); }
+.weather-box  { background: linear-gradient(135deg, #667eea, #764ba2); }
+.sun-box      { background: linear-gradient(135deg, #f7971e, #ffd200); color: black; }
+.aqi-box      { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.forecast-box { background: linear-gradient(135deg, #e96443, #904e95); }
+
+h2, h4 {
+  margin-top: 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.forecast-list li {
+  margin: 0.3rem 0;
+  color: #fdfdfd;
+  font-weight: normal;
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
